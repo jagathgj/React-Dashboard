@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import DatePicker from "react-datepicker";
 
-const SearchBar = () => {
+const SelectBar = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const CustomDatePicker = ({ value, onClick }) => (
+    <input
+      type="text"
+      className="form-control search-select bg-brighter"
+      placeholder={value}
+      onClick={onClick}
+    />
+  );
   return (
     <>
       <div className="container-fluid">
@@ -30,15 +40,15 @@ const SearchBar = () => {
                 </select>
               </div>
               <div className="col-lg-4 col-md-4 col-sm-12 p-0">
-                <input
-                  type="text"
-                  className="form-control search-select bg-brighter"
-                  placeholder="Enter your place"
+                <DatePicker
+                  selected={startDate}
+                  onChange={(date) => setStartDate(date)}
+                  customInput={<CustomDatePicker />}
                 />
               </div>
               <div className="col-lg-4 col-md-4 col-sm-12 p-0">
                 <button type="button" className="btn btn-primary search-btn">
-                  Search
+                  Upload
                 </button>
               </div>
             </div>
@@ -49,4 +59,4 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default SelectBar;
