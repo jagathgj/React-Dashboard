@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -56,27 +57,31 @@ const Header = () => {
             </a>
             <span className="last-update-status ml-auto d-flex text-light flex-column"> <span className="last-update-label d-block">Last Updated on <br /></span><span className="d-block">22 Aug, 11:57 PM IST</span></span>
             <div className="admin-links d-flex align-items-center ml-auto">
-              <a
+              <NavLink
+              exact
                 href="javascript:void(0);"
                 className=" btn btn-warning"
                 title="Upload"
+                to="/adashboard"
               >
                 Upload
-              </a>
-              <a
+              </NavLink>
+              <NavLink
                 href="javascript:void(0);"
                 className=" btn btn-warning ml-2"
                 title="View List"
+                to="/adashboard/list"
               >
                 View List
-              </a>
-              <a
+              </NavLink>
+              <NavLink
                 href="javascript:void(0);"
                 className="btn btn-warning ml-2"
                 title="Edit Places"
+                to="/adashboard/places"
               >
                 Edit Places
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

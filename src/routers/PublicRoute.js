@@ -10,8 +10,8 @@ export const PublicRoute = ({
         // isAuthenticated ? (
         //     <Redirect to="/adashboard" />           
         // ): (
-            // <Component {...props} />
-            <Redirect to="/" />
+            <Component {...props} />
+            // <Redirect to="/" />
         // )
     )} />
 )
