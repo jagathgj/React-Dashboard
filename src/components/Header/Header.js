@@ -7,9 +7,11 @@ const Header = () => {
       <header>
         <div className="navbar navbar-dark bg-dark shadow-sm">
           <div className="container-fluid d-flex justify-content-between">
-            <a
+            <NavLink
               href="javascript:void(0);"
               className="navbar-brand d-flex align-items-center"
+              title="CovidKerala"
+              to="/"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +56,7 @@ const Header = () => {
               <span className="font-weight-normal">
                 Covid<span className="font-weight-normal">Kerala</span>
               </span>
-            </a>
+            </NavLink>
             <span className="last-update-status ml-auto d-flex text-light flex-column"> <span className="last-update-label d-block">Last Updated on <br /></span><span className="d-block">22 Aug, 11:57 PM IST</span></span>
             <div className="admin-links d-flex align-items-center ml-auto">
               <NavLink

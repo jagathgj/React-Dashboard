@@ -14,7 +14,8 @@ export const PrivateRoute = ({
         //         <Component {...props} />
         //     </div>            
         // ): (
-            <Redirect to="/adashboard" />
+            // <Redirect to="/adashboard" />
+            <Component {...props} />
         // )
     )} />
 )
