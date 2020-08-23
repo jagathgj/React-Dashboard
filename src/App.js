@@ -11,9 +11,7 @@ import Routes, {history} from './routers';
 
 const App = () => {
   return (
-   <>
   <Routes />
-   </>
   );
 };
 

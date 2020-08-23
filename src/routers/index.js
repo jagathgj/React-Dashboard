@@ -1,3 +1,4 @@
+import React from 'react';
 import {Router, Switch, Route} from 'react-router-dom'
 import { createBrowserHistory } from 'history';
 import { UserPage, LoginPage, AdminPage, AdminList, AdminPlaces } from '../domains';
@@ -7,7 +8,8 @@ import { Header } from '../components';
 export const history = createBrowserHistory();
 
 const AppRouter = () => {
-  <Router history={history}>
+  return (
+    <Router history={history}>
     <div className="main-container container-fluid">
       <div className="row flex-column h-100 flex-nowrap">
         <Header></Header>
@@ -22,7 +24,7 @@ const AppRouter = () => {
         </Switch>
       </div>
     </div>
-  </Router>;
+  </Router>
+  );
 };
-
 export default AppRouter;
