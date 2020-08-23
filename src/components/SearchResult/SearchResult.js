@@ -3,7 +3,7 @@ import React from "react";
 const SearchResult = () => {
   return (
     <>
-      <div className="m-3 p-3 bg-white rounded shadow-sm">
+      <div className="search-result-table mb-2">
         <div className="table-responsive">
           <table className="table table-sm table-centered mb-0">
             <thead>
