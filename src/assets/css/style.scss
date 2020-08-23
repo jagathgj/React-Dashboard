@@ -132,16 +132,63 @@ body {
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled):focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #727cf5;
   border-color: #727cf5;
+  outline: none;
+  box-shadow: 0 2px 6px 0 rgba(114, 124, 245, 0.8);
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #7a72f5;
-  border-color: #7a72f5;
+  background-color: #727cf5;
+  border-color: #727cf5;
+  box-shadow: 0 2px 6px 0 rgba(114, 124, 245, 0.8);
+}
+
+.btn-secondary {
+  color: #727cf5;
+  background-color: transparent;
+  border-color: #727cf5;
+  box-shadow: 0 2px 6px 0 rgba(114, 124, 245, 0.5);
+}
+
+.btn-secondary:hover {
+  color: #7a72f5;
+  background-color: transparent;
+  border-color: #727cf5;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled):focus,
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-secondary.dropdown-toggle {
+  color: #7a72f5;
+  background-color: transparent;
+  border-color: #727cf5;
+  outline: none;
+}
+
+.btn-warning:not(:disabled):not(.disabled):active,
+.btn-warning:not(:disabled):not(.disabled).active,
+.btn-warning:not(:disabled):not(.disabled):focus,
+.btn-warning:not(:disabled):not(.disabled):active:focus,
+.show > .btn-warning.dropdown-toggle {
+  color: #fff;
+  background-color: transparent;
+  border-color: #c69500;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-warning:not(:disabled):not(.disabled):active:focus,
+.btn-warning:not(:disabled):not(.disabled).active:focus,
+.show > .btn-warning.dropdown-toggle:focus {
+  box-shadow: none;
 }
 
 thead {
@@ -160,6 +207,11 @@ thead {
 .table thead th,
 .table td {
   vertical-align: middle;
+}
+
+.table thead a:hover,
+.table thead a {
+  color: #fff;
 }
 
 .login-section {
@@ -198,42 +250,46 @@ textarea.form-control {
   }
 }
 
-.autocomplete-clear{
-    position: absolute;
-    top: 0.60rem;
-    right: 0.5rem;
-    z-index: 2;
-    visibility: hidden;
-    background: transparent;
-    border: 0;
+.autocomplete-clear {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.5rem;
+  z-index: 2;
+  visibility: hidden;
+  background: transparent;
+  border: 0;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  svg {
+    fill: rgb(206, 212, 218);
+  }
+  &:focus,
+  &:active,
+  &:hover,
+  &:active:focus {
     outline: none;
     border: none;
-    pointer-events: none;
-    svg{
-      fill: rgb(206, 212, 218);
-    }
-    &:focus, &:active, &:hover, &:active:focus{
-      outline: none;
-      border: none;
-    }
+  }
 
-    &.active{
-      visibility: visible;
-      pointer-events: all;
-      cursor: pointer;
-    }
+  &.active {
+    visibility: visible;
+    pointer-events: all;
+    cursor: pointer;
+  }
 }
 
-.dropdown-menu{
+.dropdown-menu {
   max-height: 300px;
   overflow: auto;
 }
 
-.dropdown-item.active, .dropdown-item:active{
+.dropdown-item.active,
+.dropdown-item:active {
   background: none;
 }
 
-.dropdown-item{
+.dropdown-item {
   padding: 0.5rem 1.5rem;
 }
 

@@ -6,3 +6,4 @@ export {default as SelectBar} from './SelectBar/SelectBar';
 export {default as TextArea} from './TextArea/TextArea';
 export {default as FilterBar} from './FilterBar/FilterBar';
 export {default as DataList} from './DataList/DataList';
+export {default as HeaderTable} from './HeaderTable/HeaderTable';

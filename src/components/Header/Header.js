@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <header>
+      <header className="flex-none">
         <div className="navbar navbar-dark bg-dark shadow-sm">
           <div className="container-fluid d-flex justify-content-between">
             <NavLink
@@ -57,10 +57,16 @@ const Header = () => {
                 Covid<span className="font-weight-normal">Kerala</span>
               </span>
             </NavLink>
-            <span className="last-update-status ml-auto d-flex text-light flex-column"> <span className="last-update-label d-block">Last Updated on <br /></span><span className="d-block">22 Aug, 11:57 PM IST</span></span>
+            <span className="last-update-status ml-auto d-flex text-light flex-column">
+              {" "}
+              <span className="last-update-label d-block">
+                Last Updated on <br />
+              </span>
+              <span className="d-block">22 Aug, 11:57 PM IST</span>
+            </span>
             <div className="admin-links d-flex align-items-center ml-auto">
               <NavLink
-              exact
+                exact
                 href="javascript:void(0);"
                 className=" btn btn-warning"
                 title="Upload"

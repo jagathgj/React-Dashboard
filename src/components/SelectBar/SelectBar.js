@@ -22,7 +22,7 @@ const SelectBar = () => {
                   className="form-control search-select"
                   id="districtList"
                 >
-                  <option>Select District</option>
+                  <option>All Districts</option>
                   <option>Thiruvananthapuram</option>
                   <option>Kollam</option>
                   <option>Pathanamthitta</option>

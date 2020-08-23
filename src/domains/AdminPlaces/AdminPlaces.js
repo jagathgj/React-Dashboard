@@ -1,11 +1,14 @@
 import React from "react";
-import { SelectBar } from "../../components";
+import { FilterBar, HeaderTable } from "../../components";
 
 const AdminPlaces = () => {
   return (
     <>
-      <div className="admin-places-section flex-fill m-3 p-3 bg-white rounded shadow-sm d-flex flex-column">
-        <SelectBar></SelectBar>
+      <div className="admin-places-section flex-none m-3 p-3 bg-white rounded shadow-sm d-flex flex-column">
+        <FilterBar showDate={false}></FilterBar>
+      </div>
+      <div className="place-list-section flex-fill mt-2 h-100">
+        <HeaderTable></HeaderTable>
       </div>
     </>
   );

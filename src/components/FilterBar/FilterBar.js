@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
-const FilterBar = () => {
+const FilterBar = (props) => {
   const [startDate, setStartDate] = useState(new Date());
   const CustomDatePicker = ({ value, onClick }) => (
     <input
@@ -22,7 +22,7 @@ const FilterBar = () => {
                   className="form-control search-select"
                   id="districtList"
                 >
-                  <option>Select District</option>
+                  <option>All Districts</option>
                   <option>Thiruvananthapuram</option>
                   <option>Kollam</option>
                   <option>Pathanamthitta</option>
@@ -39,18 +39,34 @@ const FilterBar = () => {
                   <option>Kasaragod</option>
                 </select>
               </div>
-              <div className="col-lg-4 col-md-4 col-sm-12 p-0">
-                <DatePicker
-                  selected={startDate}
-                  onChange={(date) => setStartDate(date)}
-                  customInput={<CustomDatePicker />}
-                />
-              </div>
+              {props.showDate && props.showDate ? (
+                <div className="col-lg-4 col-md-4 col-sm-12 p-0">
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => setStartDate(date)}
+                    customInput={<CustomDatePicker />}
+                  />
+                </div>
+              ) : (
+                ""
+              )}
               <div className="col-lg-4 col-md-4 col-sm-12 p-0">
                 <button type="button" className="btn btn-primary search-btn">
                   Filter
                 </button>
               </div>
+              {!props.showDate && !props.showDate ? (
+                <div className="col-lg-4 col-md-4 col-sm-12 p-0">
+                  <button
+                    type="button"
+                    className="btn btn-secondary search-btn"
+                  >
+                    Update
+                  </button>
+                </div>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
