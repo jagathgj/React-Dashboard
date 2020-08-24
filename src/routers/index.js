@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, BrowserRouter as Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import {
   UserPage,
@@ -15,7 +15,7 @@ export const history = createBrowserHistory();
 
 const AppRouter = () => {
   return (
-    <BrowserRouter history={history}>
+    <Router history={history}>
       <div className="main-container container-fluid">
         <div className="row flex-column h-100 flex-nowrap">
           <Header></Header>
@@ -45,7 +45,7 @@ const AppRouter = () => {
           </Switch>
         </div>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 export default AppRouter;

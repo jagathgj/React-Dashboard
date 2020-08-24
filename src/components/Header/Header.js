@@ -8,7 +8,6 @@ const Header = () => {
         <div className="navbar navbar-dark bg-dark shadow-sm">
           <div className="container-fluid d-flex justify-content-between">
             <NavLink
-              href="javascript:void(0);"
               className="navbar-brand d-flex align-items-center"
               title="CovidKerala"
               to="/"
@@ -67,7 +66,6 @@ const Header = () => {
             <div className="admin-links d-flex align-items-center ml-auto">
               <NavLink
                 exact
-                href="javascript:void(0);"
                 className=" btn btn-warning"
                 title="Upload"
                 to="/adashboard"
@@ -75,7 +73,6 @@ const Header = () => {
                 Upload
               </NavLink>
               <NavLink
-                href="javascript:void(0);"
                 className=" btn btn-warning ml-2"
                 title="View List"
                 to="/adashboard/list"
@@ -83,12 +80,18 @@ const Header = () => {
                 View List
               </NavLink>
               <NavLink
-                href="javascript:void(0);"
                 className="btn btn-warning ml-2"
                 title="Edit Places"
                 to="/adashboard/places"
               >
                 Edit Places
+              </NavLink>
+              <NavLink
+                className="btn ml-2 logout-btn text-light"
+                title="Logout"
+                to="/"
+              >
+                Logout
               </NavLink>
             </div>
           </div>

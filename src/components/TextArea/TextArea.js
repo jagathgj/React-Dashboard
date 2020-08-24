@@ -8,7 +8,7 @@ const TextArea = () => {
           className="form-control"
           id="TextAreaContent"
           rows="3"
-          autocomplete="off"
+          autoComplete="off"
         ></textarea>
       </div>
     </>

@@ -55,23 +55,22 @@ const SearchBar = () => {
                   placeholder="Enter your place"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
                   id="dropdownMenuInput"
                   onChange={toggleTyping}
-                  onfocus={toggleTyping}
+                  onFocus={toggleTyping}
                   ref={inputRef}
                 />
                 <ul className={isTyping ? "dropdown-menu w-100 show" : "dropdown-menu w-100"} aria-labelledby="dropdownMenuInput">
                   <li className="dropdown-item d-flex align-items-center">
-                  <div class="d-flex align-items-center w-100" title="Place1">
+                  <div className="d-flex align-items-center w-100" title="Place1">
                 {/* <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="Place1"
-                /><label class="form-check-label" for="Place1"
+                /><label className="form-check-label" for="Place1"
                   >Place1</label>
-                  <label class="form-check-span" for="Place1"></label> */}
-                  <span class="form-check-span">Place1</span>
+                  <label className="form-check-span" for="Place1"></label> */}
+                  <span className="form-check-span">Place1</span>
                   </div>
                   </li>
                 </ul>
